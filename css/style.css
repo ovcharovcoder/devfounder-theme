@@ -797,6 +797,12 @@ pre {
   opacity: 1;
   transform: translateY(0);
 }
+
+.cta-section-title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
 .footer {
   border-top: 1px solid #3d352c;
   padding: 2rem 0;
@@ -881,6 +887,16 @@ pre {
   .modal-content {
     padding: 1rem;
   }
+  .slider-btn {
+    top: auto;
+    bottom: 0%;
+  }
+  .slider-btn.prev {
+    left: 10px;
+  }
+  .slider-btn.next {
+    right: 10px;
+  }
 }
 
 @media (max-width: 540px) {
@@ -906,6 +922,26 @@ pre {
     padding-block: 20px;
   }
   .feature-card {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 380px) {
+  .hero h1 {
+    font-size: 30px;
+  }
+  .hero p {
+    font-size: 16px;
+  }
+  .section-title,
+  .cta-section-title {
+    font-size: 24px;
+  }
+  .features {
+    padding: 0px;
+  }
+  .cta-section,
+  .palette {
     padding: 20px;
   }
 }
