@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
+    <title>DevFoundry Ember — Modern Dark Theme for VS Code</title>
+    <meta
+      name="description"
+      content="DevFoundry Ember is a sophisticated dark theme for Visual Studio Code with warm amber accents, crafted for frontend architects and full-stack developers."
+    />
+    <meta name="author" content="ovcharovcoder" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <nav class="navbar" id="navbar">
+      <div class="container nav-content">
+        <div class="nav-left">
+          <button class="burger" id="burgerBtn">
+            <span></span><span></span><span></span>
+          </button>
+          <a href="#" class="logo">
+            <div class="logo-icon"></div>
+            <span class="logo-text">DevFoundry Ember</span>
+          </a>
+        </div>
+        <div class="nav-links" id="navLinks">
+          <a href="#preview">Preview</a>
+          <a href="#features">Features</a>
+          <a href="#tech">Tech Stack</a>
+          <a href="#testimonials">Reviews</a>
+        </div>
+        <a
+          href="https://marketplace.visualstudio.com/items?itemName=ovcharovcoder.devfoundry-umber"
+          target="_blank"
+          class="btn-outline"
+          >Marketplace</a
+        >
+      </div>
+    </nav>
+
+    <main>
+      <!-- Hero Section with Animated Code Background -->
+      <section class="hero">
+        <canvas id="codeCanvas"></canvas>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+          <div class="badge">
+            ✦ crafted for frontend architects & full-stack devs
+          </div>
+          <h1>DevFoundry Ember<br />Warm darkness, precise syntax</h1>
+          <p>
+            A sophisticated dark theme for Visual Studio Code with warm amber
+            accents, a deep charcoal background, and finely tuned semantic
+            colors — optimized for long, comfortable coding sessions.
+          </p>
+          <div class="button-group">
+            <a
+              href="https://marketplace.visualstudio.com/items?itemName=ovcharovcoder.devfoundry-umber"
+              target="_blank"
+              class="btn-primary"
+              >Install from Marketplace</a
+            >
+            <a href="#preview" class="btn-secondary">See live demo</a>
+          </div>
+        </div>
+      </section>
+
+      <div class="container" id="tech">
+        <section>
+          <h2 class="section-title">Supported languages & Frameworks</h2>
+          <p class="section-sub">
+            Click any card to preview code with DevFoundry Ember highlighting.
+          </p>
+          <div class="tech-grid" id="techGrid"></div>
+        </section>
+      </div>
+
+      <div class="container" id="preview">
+        <section class="preview-section">
+          <h2 class="section-title">Experience the ember glow</h2>
+          <p class="section-sub">
+            React + TypeScript • Authentic VS Code syntax highlighting
+          </p>
+          <div class="code-card" id="codeCard1">
+            <div class="code-header">
+              <div class="window-dot"></div>
+              <div class="window-dot"></div>
+              <div class="window-dot"></div>
+              <span
+                style="margin-left: 12px; font-size: 0.75rem; color: #92897d"
+                >Dashboard.tsx</span
+              >
+            </div>
+            <div class="code-content">
+              <pre><span class="token-keyword">import</span> <span class="token-class">React</span>, { <span class="token-class">useState</span> } <span class="token-keyword">from</span> <span class="token-string">'react'</span>;
+<span class="token-keyword">import</span> { <span class="token-function">useQuery</span> } <span class="token-keyword">from</span> <span class="token-string">'@tanstack/react-query'</span>;
+<span class="token-keyword">import</span> <span class="token-jsx">styled</span> <span class="token-keyword">from</span> <span class="token-string">'styled-components'</span>;
+
+<span class="token-keyword">interface</span> <span class="token-class">Metrics</span> { activeUsers: <span class="token-class">number</span>; }
+
+<span class="token-keyword">const</span> <span class="token-function">DashboardCard</span> = <span class="token-keyword">styled</span>.<span class="token-function">div</span><span class="token-string">`</span>
+<span class="token-string">  background: #2A241F; border-radius: 24px;</span>
+<span class="token-string">  border: 1px solid #C88A3A33;</span>
+<span class="token-string">  &:hover { border-color: #C88A3A; }</span>
+<span class="token-string">`</span>;
+
+<span class="token-keyword">export const</span> <span class="token-function">Dashboard</span> = () => {
+  <span class="token-keyword">const</span> { data } = <span class="token-function">useQuery</span>&lt;<span class="token-class">Metrics</span>&gt;({ queryKey: [<span class="token-string">'metrics'</span>] });
+  <span class="token-keyword">return</span> (<span class="token-jsx">&lt;DashboardCard&gt;</span> {data?.activeUsers}<span class="token-jsx">&lt;/DashboardCard&gt;</span>);
+};</pre>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <div class="container" id="features">
+        <div class="features">
+          <h2 class="section-title">Why DevFoundry Ember?</h2>
+          <p class="section-sub">
+            Built for deep focus, optimized for modern frameworks.
+          </p>
+          <div class="features-grid" id="featuresGrid"></div>
+        </div>
+      </div>
+
+      <div class="container" id="testimonials">
+        <section class="testimonials-section">
+          <h2 class="section-title">Developer reviews</h2>
+          <p class="section-sub">
+            See what the community thinks about DevFoundry Ember.
+          </p>
+          <div class="slider-container">
+            <div class="testimonial-slider" id="testimonialSlider"></div>
+            <button class="slider-btn prev" id="prevBtn">‹</button>
+            <button class="slider-btn next" id="nextBtn">›</button>
+          </div>
+          <div class="slider-dots" id="sliderDots"></div>
+        </section>
+      </div>
+
+      <div class="container">
+        <div class="palette" id="palette">
+          <h2 style="text-align: center; margin-bottom: 1.5rem">
+            Ember core palette
+          </h2>
+          <div class="color-swatches">
+            <div class="swatch">
+              <div class="swatch-color" style="background: #1c1713"></div>
+              <span>Background</span>
+            </div>
+            <div class="swatch">
+              <div class="swatch-color" style="background: #c88a3a"></div>
+              <span>Ember Amber</span>
+            </div>
+            <div class="swatch">
+              <div class="swatch-color" style="background: #66ccff"></div>
+              <span>Electric Blue</span>
+            </div>
+            <div class="swatch">
+              <div class="swatch-color" style="background: #9ecd7a"></div>
+              <span>Mint Green</span>
+            </div>
+            <div class="swatch">
+              <div class="swatch-color" style="background: #b48ead"></div>
+              <span>Lavender</span>
+            </div>
+            <div class="swatch">
+              <div class="swatch-color" style="background: #e06c75"></div>
+              <span>Ember Red</span>
+            </div>
+            <div class="swatch">
+              <div class="swatch-color" style="background: #ffb454"></div>
+              <span>Golden Glow</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="cta-section">
+          <h2 style="font-size: 2rem; margin-bottom: 1rem">
+            Ignite your editor
+          </h2>
+          <p style="max-width: 600px; margin: 0 auto 2rem auto">
+            Download DevFoundry Ember — a handcrafted dark theme, warm and
+            precise.
+          </p>
+          <div class="button-group">
+            <a
+              href="https://marketplace.visualstudio.com/items?itemName=ovcharovcoder.devfoundry-umber"
+              target="_blank"
+              class="btn-primary"
+              >VS Code Marketplace</a
+            >
+            <!-- <a
+              href="https://marketplace.visualstudio.com/items?itemName=ovcharovcoder.devfoundry-umber"
+              target="_blank"
+              class="btn-secondary"
+              >⭐ Rate 5 stars</a
+            > -->
+          </div>
+        </div>
+      </div>
+
+      <footer class="footer">
+        <div class="container">
+          <p>
+            DevFoundry Ember — crafted with 🧡 by Andrii Ovcharov • inspired by
+            modern frontend workflows
+          </p>
+          <p class="copyright">
+            © 2026
+            <a
+              class="copyright-link"
+              href="https://www.linkedin.com/in/andrii-ovcharov-101a24196/"
+              target="_blank"
+              >Andrii Ovcharov</a
+            >
+            • All rights reserved.
+          </p>
+        </div>
+      </footer>
+    </main>
+
+    <!-- Modal for Images -->
+    <div class="modal-overlay" id="imageModal">
+      <div class="modal-container">
+        <div class="modal-header">
+          <h3 id="modalTitle">Code Preview</h3>
+          <button class="modal-close" id="closeModalBtn">✕</button>
+        </div>
+        <div class="modal-content">
+          <img id="modalImage" class="modal-image" alt="Code preview" />
+        </div>
+      </div>
+    </div>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
