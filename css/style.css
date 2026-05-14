@@ -825,6 +825,25 @@ pre {
   font-weight: 500;
 }
 
+/* Стиль для заголовка palette */
+.palette h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+/* Стиль для параграфа в CTA секції */
+.cta-section p {
+  max-width: 600px;
+  margin: 0 auto 2rem auto;
+}
+
+/* Стиль для span в code-header */
+.code-header span {
+  margin-left: 12px;
+  font-size: 0.75rem;
+  color: #92897d;
+}
+
 @media (max-width: 768px) {
   .container {
     padding: 0 1.5rem;
